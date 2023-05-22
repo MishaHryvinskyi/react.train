@@ -21,9 +21,15 @@ export const EventBoard = ({ events }) => {
 
 EventBoard.propTypes = {
     events: PropTypes.arrayOf(
-      PropTypes.shape({
-        time: PropTypes.func.isRequired,
-        description: PropTypes.string.isRequired,
-      })
-    ).isRequired,
-  };
+        PropTypes.exact({
+        name: PropTypes.string.isRequired,
+        location: PropTypes.string.isRequired,
+        speaker: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        time: {
+            start: PropTypes.string.isRequired,
+            end: PropTypes.string.isRequired,
+        }
+    })
+),
+};
