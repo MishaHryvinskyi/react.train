@@ -5,12 +5,11 @@ export const Division = styled.div`
     align-items: center;
     flex-direction: column;
     border: solid 1px black;
-    border-radius: 20px;
-    &:hover {
-        background-color: purple;
-        color: white;
-    }
+    width: 400px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px purple;
 `;
 
 export const DropdownBtn = styled.button`
@@ -26,26 +25,22 @@ export const DropdownBtn = styled.button`
     margin-bottom: 20px;
 
     &:hover {
-        color: black;
-        background-color: white;
+        background-color: grey;
         border-radius: 15px;
     }
 `;
 
 export const Dropdowne = styled.div`
 position: absolute;
-top: 1005;
+top: 100%;
 left: 0;
 width: 100%;
-hight: 400px;
+height: 100%;
+font-size: 30px;
 
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: solid 1px black;
-    border-radius: 20px;
-    &:hover {
         background-color: purple;
         color: white;
-    }
 `;

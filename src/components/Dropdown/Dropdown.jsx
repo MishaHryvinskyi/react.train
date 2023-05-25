@@ -6,24 +6,31 @@ export class Dropdown extends React.Component {
         visible: false,
     }
 
-    show = () => {
-        this.setState({ visible: true });
-    };
+toggle = () => {
+    this.setState(prevState => ({
+        visible: !prevState.visible,
+    }))
+}
 
-    hide = () => {
-        this.setState({ visible: false });
-    };
+    // show = () => {
+    //     this.setState({ visible: true });
+    // };
+
+    // hide = () => {
+    //     this.setState({ visible: false });
+    // };
     
     render() {
+        const { visible } = this.state;
         return (
             <Division>
-                <DropdownBtn type="button" onClick={this.show}>
-                    Показати
+                <DropdownBtn type="button" onClick={this.toggle}>
+                  {visible ? 'Сховати' : 'Показаи' }
                     </DropdownBtn>
-                <DropdownBtn type="button" onClick={this.hide}>
+                {/* <DropdownBtn type="button" onClick={this.hide}>
                     Сховати
-                    </DropdownBtn>
-                    {this.state.visible && (<Dropdowne>Випадаюче меню</Dropdowne>)}
+                    </DropdownBtn> */}
+                    {visible && (<Dropdowne>Випадаюче меню</Dropdowne>)}
                 
             </Division>
         );
