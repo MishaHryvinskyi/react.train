@@ -1,16 +1,17 @@
 // import clsx from "clsx";
+// import Counter from './Counter/Counter';
+import { Dropdown } from 'components/Dropdown/Dropdown';
 
 
-
-import { Container } from './App.styled';
 
 
 
 function App() {
   return (
-    <Container>
-     <button>button</button>
-    </Container>
+    <div>
+    {/* <Counter /> */}
+    <Dropdown/>
+    </div>
   );
 }
 
