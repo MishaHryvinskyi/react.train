@@ -49,4 +49,8 @@ export const Btn2 = styled.button`
 export const ValueItem = styled.span`
     font-weight: 700;
     font-size: 50px;
+    color: white;
+    &:hover {
+        color: black;
+    }
 `;
