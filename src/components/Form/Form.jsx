@@ -1,6 +1,7 @@
 import React, {Component} from "react";
+import { Form } from './Form.styled';
 
-class Form extends Component {
+class MyForm extends Component {
     state = {
         name: '',
         tag: '', 
@@ -18,12 +19,16 @@ class Form extends Component {
     handleSubmit = evt => {
       evt.preventDefault();
     this.props.onSubmit(this.state)
-      
+      this.reset();
     }
+
+reset = () => {
+    this.setState({ name: '', tag: '', })
+}
 
 render() {
     return (
-        <form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
         <label/>
         ім'я  <input 
       type='text'
@@ -39,10 +44,10 @@ render() {
       onChange={this.handleChange} 
       />
       <button type='submit'>Відправити</button>
-      </form>
+      </Form>
     )
 }
 
 }
 
-export default Form;
+export default MyForm;
