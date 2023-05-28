@@ -18,7 +18,7 @@ function App() {
     <div>
     {/* <Counter /> */}
     <Dropdown/>
-    <Counter/>
+    <Counter />
     </div>
   );
 }
