@@ -32,6 +32,14 @@ reset = () => {
     this.setState({ name: '', tag: '', })
 }
 
+componentDidMount() {
+  console.log('App ComponentDidMounth');
+}
+
+componentDidUpdate() {
+  console.log('App componentDidUpdate')
+}
+
 render() {
     return (
         <Form onSubmit={this.handleSubmit}>
