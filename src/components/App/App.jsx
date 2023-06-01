@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import Form from '../Form/Form';
 import Modal from 'components/Modal/Modal';
 import { BtnExit } from './App.styled';
+import Clock from 'components/Clock/Clock';
 
 // const colorPickerOptions = [
 //   { label: 'red', color: '#F44336'},
@@ -38,6 +39,7 @@ class App extends Component {
     {/* <Counter /> */}
     <Dropdown/>
     <Counter />
+    <Clock />
     <BtnExit type='button' onClick={this.toggleModal}>Відкрити модалку</BtnExit>
     {showModal && <Modal onClose={this.toggleModal}>
       <h1>модалка</h1>
