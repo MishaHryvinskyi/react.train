@@ -7,26 +7,13 @@ import Form from '../Form/Form';
 import Modal from 'components/Modal/Modal';
 import { BtnExit } from './App.styled';
 import Clock from 'components/Clock/Clock';
-
-
-
-
-// const colorPickerOptions = [
-//   { label: 'red', color: '#F44336'},
-//   { label: 'green', color: '#4CAF50'},
-//   { label: 'blue', color: '#2196F3'},
-//   { label: 'grey', color: '#607D8B'},
-//   { label: 'pink', color: '#E91E63'},
-//   { label: 'indigo', color: '#3F51B5'},
-// ];
+import PokemonInfo from 'components/PokemonInfo/PokemonInfo';
 
 class App extends Component {
   state = {
     showModal: false,
   };
 
-
-  
   toggleModal = () => {
     this.setState(({ showModal }) => ({
       showModal: !showModal,
@@ -38,7 +25,9 @@ class App extends Component {
   return (
   
     <div>
-      
+      <div style={{ maxWidth: 1170, margin: '0 auto', padding: 20 }}>
+      <PokemonInfo />
+    </div>
       <Form onSubmit={this.formSubvitHandler}/>
     {/* <Counter /> */}
     <Dropdown/>
