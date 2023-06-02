@@ -8,6 +8,9 @@ import Modal from 'components/Modal/Modal';
 import { BtnExit } from './App.styled';
 import Clock from 'components/Clock/Clock';
 
+
+
+
 // const colorPickerOptions = [
 //   { label: 'red', color: '#F44336'},
 //   { label: 'green', color: '#4CAF50'},
@@ -35,6 +38,7 @@ class App extends Component {
   return (
   
     <div>
+      
       <Form onSubmit={this.formSubvitHandler}/>
     {/* <Counter /> */}
     <Dropdown/>
