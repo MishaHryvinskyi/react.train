@@ -15,14 +15,12 @@ export default class Modal extends Component {
 
     handleKeyDown = e => {
         if (e.code === 'Escape') {
-        console.log("Натиснули Esc");
 
         this.props.onClose();
       }
     }
 
     handleBackdropClick = e => {
-        console.log('Клікнули в бекдроп');
         if (e.currentTarget === e.target) {
             this.props.onClose();
         }

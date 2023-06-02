@@ -10,7 +10,6 @@ class MyForm extends Component {
       }
     
     handleLicenceChenge = e => {
-      console.log(e.currentTarget.checked)
       this.setState({ licence: e.currentTarget.checked })
     }
 
@@ -33,11 +32,9 @@ reset = () => {
 }
 
 componentDidMount() {
-  console.log('App ComponentDidMounth');
 }
 
 componentDidUpdate() {
-  console.log('App componentDidUpdate')
 }
 
 render() {

@@ -9,7 +9,6 @@ export default class Clock extends Component {
     intervalId = null;
 
     componentDidMount() {
-        console.log('setInterval');
 
         this.intervalId = setInterval(
             () => this.setState({ time: new Date().toLocaleTimeString() }),
