@@ -8,9 +8,16 @@ import Modal from 'components/Modal/Modal';
 import { BtnExit } from './App.styled';
 import Clock from 'components/Clock/Clock';
 import PokemonInfo from 'components/PokemonInfo/PokemonInfo';
+import PokemonForm from 'components/PokemonInfo/PokemonForm';
+import { ToastContainer } from 'react-toastify';
 
 class App extends Component {
+handleFormSubmit = pokemonName => {
+ this.setState({ pokemonName });
+}
+
   state = {
+    pokemonName: '',
     showModal: false,
   };
 
@@ -25,7 +32,9 @@ class App extends Component {
   return (
   
     <div>
+      <ToastContainer autoClose={3000}/>
       <div style={{ maxWidth: 1170, margin: '0 auto', padding: 20 }}>
+        <PokemonForm onSubmit={this.handleFormSubmit} />
       <PokemonInfo />
     </div>
       <Form onSubmit={this.formSubvitHandler}/>
