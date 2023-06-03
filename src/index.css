@@ -1,4 +1,4 @@
-@import-normalize;
+
 
 * {
     box-sizing:  border-box;
@@ -8,4 +8,18 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.icons-spin {
+    margin-right: 10px;
+    animation: icon-spin 2s infinite linear;
+}
+
+@keyframes icons-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
 }
