@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PokemonErrorView from './PokemonErrorView';
 import PokemonDataiew from './PokemonDataView';
 import PokemonPendingView from './PokemonPendingView';
+import { PokemonName } from './PokemonForm.styled';
 
 export default class PokemonInfo extends Component {
     state = {
@@ -42,7 +43,7 @@ componentDidUpdate(prevProps, prevState) {
         
 
         if(status === 'idle') {
-            return <div>Введіть імя покемона</div>;
+            return <PokemonName>Введіть імя покемона</PokemonName>;
         }
         if(status === 'pending') {
             return <PokemonPendingView />

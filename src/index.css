@@ -13,6 +13,7 @@ body {
 .icons-spin {
     margin-right: 10px;
     animation: icon-spin 2s infinite linear;
+
 }
 
 @keyframes icons-spin {
@@ -23,3 +24,4 @@ body {
         transform: rotate(359deg);
     }
 }
+

@@ -1,19 +1,21 @@
+import { PokemonInfo, PokemonListItem, PokemonList, PokemonTitle, PokemonImges } from './PokemonForm.styled'
+
 export default function PokemonDataiew({ pokemon: { sprites, name, stats } }) {
     return(
-        <div>
-            <img 
+        <PokemonInfo>
+            <PokemonImges 
             src={sprites.other['official-artwork'].front_default}
             width="240"
             alt={name}
             />
-            <h2>{name}</h2>
-            <ul>
+            <PokemonTitle>{name}</PokemonTitle>
+            <PokemonList>
                 {stats.map(entry => (
-                    <li key={entry.stat.name}>
+                    <PokemonListItem key={entry.stat.name}>
                         {entry.stat.name} : {entry.base_stat}
-                    </li>
+                    </PokemonListItem>
                 ))}
-            </ul>
-        </div>
+            </PokemonList>
+        </PokemonInfo>
     )
 }

@@ -1,5 +1,5 @@
 import { ImSpinner } from "react-icons/im";
-
+import { LoadingInfo, LoadingContainer } from './PokemonForm.styled';
 
 const style = {
     spinner: {
@@ -11,11 +11,11 @@ export default function PokemonPendingView () {
     
 
     return (
-        <div role="alert">
-            <div style={style.spinner}>
+        <LoadingContainer role="alert">
+            <LoadingInfo style={style.spinner}>
                 <ImSpinner size="32" className="icons-spin"/>
                 Загружаємо...
-            </div>
-        </div>
+            </LoadingInfo>
+        </LoadingContainer>
     )
 }
