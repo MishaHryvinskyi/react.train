@@ -10,6 +10,7 @@ import Clock from 'components/Clock/Clock';
 import PokemonInfo from 'components/PokemonInfo/PokemonInfo';
 import PokemonForm from 'components/PokemonInfo/PokemonForm';
 import { ToastContainer } from 'react-toastify';
+import Ala from '../hook/me';
 
 class App extends Component {
   
@@ -53,6 +54,7 @@ handleFormSubmit = pokemonName => {
       <p>O ДІДЬКО</p>
       <BtnExit type='button' onClick={this.toggleModal}>Закрити</BtnExit>
     </Modal>}
+    <Ala />
     </div>
   );
 }
